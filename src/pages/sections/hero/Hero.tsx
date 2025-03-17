@@ -4,7 +4,7 @@ import Avatar from "../../../assets/images/profile_img.jpg";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Theme } from "@mui/material/styles";
 import StyledButton from "../../../components/StyledButton";
-import { AnimatedBackground } from "../../../components/animatedBackground/AnimatedBackground";
+import { AnimatedBackground } from "../../../components/animatesBackground/AnimatedBackground";
 
 
 function Hero() {
