@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
 
-export const AnimatedBackground = () => {
+export const AnimatesBackground = () => {
     return (
         <Box>
             <svg
