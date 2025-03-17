@@ -4,7 +4,7 @@ import Avatar from "../../../assets/images/profile_img.jpg";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Theme } from "@mui/material/styles";
 import StyledButton from "../../../components/StyledButton";
-import { AnimatedBackground } from "../../../components/animatesBackground/AnimatedBackground";
+import { AnimatesBackground } from "../../../components/animatesBackground/AnimatesBackground";
 
 
 function Hero() {
@@ -36,7 +36,7 @@ function Hero() {
           <Grid item xs={12} md={5}>
             <Box position="relative">
               <Box position="absolute" width={"170%"} top={-100} right={0}>
-                <AnimatedBackground/>
+                <AnimatesBackground/>
               </Box>
               <Box position="relative" textAlign="center">
               <StyledImg src={Avatar} alt="avatar"/>
@@ -48,7 +48,7 @@ function Hero() {
             <Typography color="primary.contrastText" variant="h3" textAlign="center">Software Developer</Typography>
             <Grid container display="flex" justifyContent="center" spacing={2} pt={3}>
               <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                <StyledButton>
+                <StyledButton onClick={() => console.log("Download CV")}>
                   <DownloadIcon/>
                   <Typography>
                     Download CV
@@ -56,7 +56,7 @@ function Hero() {
                 </StyledButton>
               </Grid>  
               <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                <StyledButton>
+                <StyledButton onClick={() => window.open("https://wa.me/5554981570394")}>
                   <WhatsAppIcon/>
                   <Typography>
                     Contact Me
