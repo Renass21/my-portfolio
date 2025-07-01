@@ -1,10 +1,11 @@
 import { Box, Container, Grid, styled, Typography } from "@mui/material"
-import DownloadIcon from '@mui/icons-material/Download';
 import Avatar from "../../../assets/images/profile_img.jpg";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Theme } from "@mui/material/styles";
 import StyledButton from "../../../components/StyledButton";
 import { AnimatesBackground } from "../../../components/animatesBackground/AnimatesBackground";
+import TitleComponent from "../../../components/titleComponent/TitleComponent";
 
 
 function Hero() {
@@ -13,11 +14,10 @@ function Hero() {
         height: "100vh",
         display: "flex",
         alignItems: "center",
-        [theme.breakpoints.up('xs')]: { // <= mobile
+        [theme.breakpoints.up('xs')]: {
           paddingTop: "100px",
-
       },
-      [theme.breakpoints.up('md')]: { // >=mobile
+      [theme.breakpoints.up('md')]: {
           paddingTop: "0",
       },
   }))
@@ -25,7 +25,7 @@ function Hero() {
   const StyledImg = styled("img")(({ theme }) => ({ 
         width: "75%",
         borderRadius: "5%",
-        border: `1px solid ${theme.palette.primary.contrastText}`,
+        border: `2px solid ${theme.palette.primary.contrastText}`,
   }))
     
   return (
@@ -44,14 +44,14 @@ function Hero() {
             </Box>
           </Grid>
           <Grid item xs={12} md={7}>
-            <Typography color="secondary.main" variant="h2" textAlign="center" pb={2}>Renato dos Santos</Typography>
+            <TitleComponent />
             <Typography color="primary.contrastText" variant="h3" textAlign="center">Software Developer</Typography>
             <Grid container display="flex" justifyContent="center" spacing={2} pt={3}>
               <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                <StyledButton onClick={() => console.log("Download CV")}>
-                  <DownloadIcon/>
+                <StyledButton onClick={() =>  window.open("https://www.linkedin.com/in/renatodossantoss")}>
+                  <LinkedInIcon/>
                   <Typography>
-                    Download CV
+                    LinkedIn
                   </Typography>
                 </StyledButton>
               </Grid>  
