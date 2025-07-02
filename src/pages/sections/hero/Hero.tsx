@@ -50,7 +50,7 @@ function Hero() {
               <Grid item xs={12} md={4} display="flex" justifyContent="center">
                 <StyledButton onClick={() =>  window.open("https://www.linkedin.com/in/renatodossantoss")}>
                   <LinkedInIcon/>
-                  <Typography>
+                  <Typography variant="button">
                     LinkedIn
                   </Typography>
                 </StyledButton>
@@ -58,7 +58,7 @@ function Hero() {
               <Grid item xs={12} md={4} display="flex" justifyContent="center">
                 <StyledButton onClick={() => window.open("https://wa.me/5554981570394")}>
                   <WhatsAppIcon/>
-                  <Typography>
+                  <Typography variant="button">
                     Contact Me
                   </Typography>
                 </StyledButton>
