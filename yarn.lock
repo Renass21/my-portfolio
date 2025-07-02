@@ -387,6 +387,11 @@
     "@eslint/core" "^0.15.1"
     levn "^0.4.1"
 
+"@fontsource/bungee-inline@^5.2.6":
+  version "5.2.6"
+  resolved "https://registry.npmjs.org/@fontsource/bungee-inline/-/bungee-inline-5.2.6.tgz#27bcbc694db4cddf578c280086d7a8caae01649c"
+  integrity sha512-kZ/sXkGvNbDBWrgpvRLIeoG8FAqrdl19qi3YmZGATNkhbBUNjaiiSbe24HSm/Mxy6Cc+dsjCHkKtOEmM2vUdpQ==
+
 "@fontsource/bungee-outline@^5.2.6":
   version "5.2.6"
   resolved "https://registry.npmjs.org/@fontsource/bungee-outline/-/bungee-outline-5.2.6.tgz#1a6bc0d28c8cd7182b2c7da3488e7b47df7091ea"

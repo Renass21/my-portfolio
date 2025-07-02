@@ -1,8 +1,12 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
-
+// @ts-expect-error: No type definitions for this font package
 import '@fontsource/bungee-outline';
+// @ts-expect-error: No type definitions for this font package
 import '@fontsource/bungee-shade'
+// @ts-expect-error: No type definitions for this font package
 import '@fontsource/monofett';
+// @ts-expect-error: No type definitions for this font package
+import '@fontsource/bungee-inline';
 
 let theme = createTheme({
   palette: {    
@@ -18,6 +22,7 @@ let theme = createTheme({
     fontFamily: [
       '"Bungee Shade"',
       '"Bungee Outline"',
+      '"Bungee Inline"',
       'cursive',
       'Roboto',
       'sans-serif'
@@ -34,6 +39,16 @@ let theme = createTheme({
       fontSize: '2.7rem',
       fontWeight: 300,
      },
+     body1: {
+      fontFamily: '"Bungee Inline", sans-serif',
+      fontSize: '1.5rem',
+      fontWeight: 300,
+     },
+     button: {
+      fontFamily: '"Bungee Inline", sans-serif',
+      fontSize: '1rem',
+      fontWeight: 300,
+     }
   },
 });
 

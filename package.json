@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@fontsource/bungee-inline": "^5.2.6",
     "@fontsource/bungee-outline": "^5.2.6",
     "@fontsource/bungee-shade": "^5.2.6",
     "@fontsource/monofett": "^5.2.6",
