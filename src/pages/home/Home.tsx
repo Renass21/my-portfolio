@@ -1,5 +1,6 @@
-import About from "../../components/about/About"
+
 import NavBar from "../../components/navbar/NavBar"
+import About from "../sections/about/About"
 import Hero from "../sections/hero/Hero"
 
 function Home() {
