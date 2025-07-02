@@ -11,13 +11,13 @@ function StyledButton({ children, onClick }: StyledButtonProps) {
     const StyledButton = styled("button")(({theme}) => ({
         backgroundColor: "transparent",
         border: `1px solid ${theme.palette.primary.contrastText}`,
-        borderRadius: "3px",
-        padding: "12px 16px",
+        borderRadius: "0.3rem",
+        padding: "0.4rem 0.8rem",
         width: "100%",
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
-        gap: "10px",
+        gap: "1rem",
         color: theme.palette.primary.contrastText,
         '&:hover': {
             backgroundColor: theme.palette.secondary.dark,
