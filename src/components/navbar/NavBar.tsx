@@ -1,4 +1,7 @@
+
 import { AppBar, MenuItem, styled, Toolbar } from "@mui/material"
+import { Link } from "react-router-dom";
+
 
 
 function NavBar() {
@@ -10,15 +13,13 @@ function NavBar() {
     }));
 
     return (
-      <>
-        <AppBar position="absolute">
-            <StyledToolbar>
-                <MenuItem>About</MenuItem>
-                <MenuItem>Skills</MenuItem>
-                <MenuItem>Projects</MenuItem>
-            </StyledToolbar>
-        </AppBar>   
-      </>
+      <AppBar position="absolute">
+        <StyledToolbar>
+          <MenuItem component={Link} to="/about">About</MenuItem>
+          <MenuItem component={Link} to="/skills">Skills</MenuItem>
+          <MenuItem component={Link} to="/projects">Projects</MenuItem>
+        </StyledToolbar>
+      </AppBar>
     )
   }
   
