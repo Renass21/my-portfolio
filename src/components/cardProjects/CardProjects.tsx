@@ -3,32 +3,23 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Skeleton from '@mui/material/Skeleton';
+import { useEffect, useState } from 'react';
 
 interface MediaProps {
   loading?: boolean;
+  projectUrl?: string;
 }
 
-function CardSkeleton(props: MediaProps) {
-  const { loading = false } = props;
 
-  return (
-    <Card sx={{ maxWidth: 345, m: 2 }}>
+function CardSkeleton(props: MediaProps) {
+  const { loading = false, projectUrl } = props;
+  const card = (
+    <Card sx={{ maxWidth: 345, m: 2, cursor: projectUrl && !loading ? 'pointer' : 'default' }}>
       <CardHeader
-        avatar={
-          loading ? (
-            <Skeleton animation="wave" variant="circular" width={40} height={40} />
-          ) : (
-            <Avatar
-              alt="Ted talk"
-              src="https://pbs.twimg.com/profile_images/877631054525472768/Xp5FAPD5_reasonably_small.jpg"
-            />
-          )
-        }
         action={
           loading ? null : (
             <IconButton aria-label="settings">
@@ -45,14 +36,14 @@ function CardSkeleton(props: MediaProps) {
               style={{ marginBottom: 6 }}
             />
           ) : (
-            'Ted'
+            'Nikel - Coda:í'
           )
         }
         subheader={
           loading ? (
-            <Skeleton animation="wave" height={10} width="40%" />
+            <Skeleton animation="wave" height={10} width="20%" />
           ) : (
-            '5 hours ago'
+            <small>clique no card</small>
           )
         }
       />
@@ -62,33 +53,49 @@ function CardSkeleton(props: MediaProps) {
         <CardMedia
           component="img"
           height="140"
-          image="https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/72bda89f-9bbf-4685-910a-2f151c4f3a8a/NicolaSturgeon_2019T-embed.jpg?w=512"
-          alt="Nicola Sturgeon on a TED talk stage"
+          image="src/assets/images/codai.png"
+          alt="Nikel"
         />
       )}
       <CardContent>
         {loading ? (
           <React.Fragment>
             <Skeleton animation="wave" height={10} style={{ marginBottom: 6 }} />
-            <Skeleton animation="wave" height={10} width="80%" />
+            <Skeleton animation="wave" height={10} width="100%" />
           </React.Fragment>
         ) : (
-          <Typography variant="body2" component="p" sx={{ color: 'text.secondary' }}>
+          <Typography variant="body2" component="p" sx={{ color: 'text.secundary' }}>
             {
-              "Why First Minister of Scotland Nicola Sturgeon thinks GDP is the wrong measure of a country's success:"
+              "Projeto chamado Nikel, do curso Codaí feito com bootstrap, HTML, CSS e Javascript"
             }
-          </Typography>
+         </Typography>
         )}
       </CardContent>
     </Card>
   );
+  if (!loading && projectUrl) {
+    return (
+      <a href={projectUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+        {card}
+      </a>
+    );
+  }
+  return card;
 }
 
 export default function CardProjects() {
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(()=> {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div>
-      <CardSkeleton loading />
-      <CardSkeleton />
+      <CardSkeleton loading={loading} projectUrl="https://nikel-codai2-0.vercel.app/" />
+      {/* Adicione outros cards com outros links se quiser */}
     </div>
   );
 }
+
