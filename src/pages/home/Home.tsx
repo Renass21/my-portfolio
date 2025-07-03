@@ -5,15 +5,14 @@ import Hero from "../sections/hero/Hero"
 
 function Home() {
  
-
-    return (
-      <>
-        <NavBar />
-        <Hero />
-        <About />
-      </>
-    )
-  }
+  return (
+    <>
+      <NavBar/>
+      <Hero/>
+      <About/>
+    </>
+  )
+}
   
   export default Home
   
