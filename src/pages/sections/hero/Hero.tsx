@@ -7,8 +7,11 @@ import StyledButton from "../../../components/StyledButton";
 import { AnimatesBackground } from "../../../components/animatesBackground/AnimatesBackground";
 import TitleComponent from "../../../components/titleComponent/TitleComponent";
 
+interface Props {
+    id?: string;
+}
 
-function Hero() {
+function Hero({ id } : Props) {
   const StyledHero = styled("div")(({ theme }: { theme: Theme }) => ({
         backgroundColor: theme.palette.primary.main,
         height: "100vh",
@@ -30,7 +33,7 @@ function Hero() {
     
   return (
     <>
-      <StyledHero>
+      <StyledHero id={id} >
       <Container maxWidth="lg">
         <Grid container spacing={2}>
           <Grid item xs={12} md={5}>

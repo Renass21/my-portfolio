@@ -4,8 +4,11 @@ import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
 import CardProjects from "../../../components/cardProjects/CardProjects"
 
+interface Props {
+    id?: string;
+}
 
-function Projects() {
+function Projects({ id }: Props) {
 
     const StyledSkills = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.primary.main,
@@ -22,7 +25,7 @@ function Projects() {
       },
   }))
     return(
-        <StyledSkills>
+        <StyledSkills id={id}>
             <Container maxWidth="lg">
             <Box display="flex" alignItems="center" textAlign="center" justifyContent="center" flexDirection="column">
                 <Typography variant="h2" marginBottom="2rem" >

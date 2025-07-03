@@ -1,7 +1,10 @@
 import { Box, Container, styled } from "@mui/material"
 import Typography from "@mui/material/Typography"
 
-function About() {
+interface Props {
+    id?: string;
+}
+function About({id}: Props) {
 
     const StyledAbout = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.primary.main,
@@ -18,7 +21,7 @@ function About() {
       },
   }))
     return(
-        <StyledAbout>
+        <StyledAbout id={id}>
             <Container maxWidth="lg">
             <Box display="flex" alignItems="center" textAlign="center" justifyContent="center" flexDirection="column">
                 <Typography variant="h2" marginBottom="2rem" >

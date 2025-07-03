@@ -5,7 +5,12 @@ import Typography from "@mui/material/Typography"
 import CardSkills from "../../../components/cardSkills/CardSkills"
 
 
-function Skills() {
+
+interface Props {
+    id?: string;
+}
+
+function Skills({ id }: Props) {
 
     const StyledSkills = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.primary.main,
@@ -22,7 +27,7 @@ function Skills() {
       },
   }))
     return(
-        <StyledSkills>
+        <StyledSkills id={id}>
             <Container maxWidth="lg">
             <Box display="flex" alignItems="center" textAlign="center" justifyContent="center" flexDirection="column">
                 <Typography variant="h2" marginBottom="2rem" >
