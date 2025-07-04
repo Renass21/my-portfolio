@@ -3,6 +3,7 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import codaiImg from 'src/assets/images/codai.jpg';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -53,7 +54,7 @@ function CardSkeleton(props: MediaProps) {
         <CardMedia
           component="img"
           height="140"
-          image="src/assets/images/codai.jpg"
+          image={codaiImg}
           alt="Nikel"
         />
       )}
