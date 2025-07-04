@@ -1,8 +1,10 @@
-import { Grid, styled } from "@mui/material"
+import { styled } from "@mui/material"
 import Box from "@mui/material/Box"
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
+
 import CardSkills from "../../../components/cardSkills/CardSkills"
+import { skills } from '../../../database/skills';
 
 
 
@@ -26,6 +28,9 @@ function Skills({ id }: Props) {
           paddingTop: "0",
       },
   }))
+
+
+
     return(
         <StyledSkills id={id}>
             <Container maxWidth="lg">
@@ -33,20 +38,32 @@ function Skills({ id }: Props) {
                 <Typography variant="h2" marginBottom="2rem" >
                     SKILLS
                 </Typography>
-               <Grid item xs={12} md={4} gap="1rem" display="flex" justifyContent="center">
-                <CardSkills />
-                <CardSkills />
-                <CardSkills />
-                <CardSkills />
-                <CardSkills />
-                <CardSkills />
-                <CardSkills />
-                <CardSkills />
-                <CardSkills />
-                <CardSkills />
-                <CardSkills />
-                <CardSkills />
-               </Grid>
+
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: 2,
+                  justifyContent: 'center',
+                  width: '100%',
+                }}
+              >
+                {skills.map((skill) => (
+                  <Box
+                    key={skill.id}
+                    sx={{
+                      width: { xs: '30%', sm: '22%', md: '15.5%' },
+                      minWidth: 100,
+                      aspectRatio: '1',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <CardSkills skillName={skill.skillName} skillImage={skill.skillImage} />
+                  </Box>
+                ))}
+              </Box>
                
             </Box>
             </Container>
