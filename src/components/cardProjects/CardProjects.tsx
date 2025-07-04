@@ -53,7 +53,7 @@ function CardSkeleton(props: MediaProps) {
         <CardMedia
           component="img"
           height="140"
-          image="src/assets/images/codai.png"
+          image="src/assets/images/codai.jpg"
           alt="Nikel"
         />
       )}
