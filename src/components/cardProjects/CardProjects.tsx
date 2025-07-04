@@ -21,6 +21,7 @@ function CardSkeleton(props: MediaProps) {
   const card = (
     <Card sx={{ maxWidth: 345, m: 2, cursor: projectUrl && !loading ? 'pointer' : 'default' }}>
       <CardHeader
+        
         action={
           loading ? null : (
             <IconButton aria-label="settings">
@@ -37,7 +38,11 @@ function CardSkeleton(props: MediaProps) {
               style={{ marginBottom: 6 }}
             />
           ) : (
+            <Typography variant="body1" component="p" sx={{ color: 'text.secundary' }}>
+            {
             'Nikel - Coda:í'
+            }
+            </Typography> 
           )
         }
         subheader={

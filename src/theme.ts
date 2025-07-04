@@ -44,6 +44,11 @@ let theme = createTheme({
       fontSize: '1.5rem',
       fontWeight: 300,
      },
+     body2: {
+      fontFamily: '"Bungee Inline", sans-serif',
+      fontSize: '1rem',
+      fontWeight: 200,
+     },
      button: {
       fontFamily: '"Bungee Inline", sans-serif',
       fontSize: '1rem',
