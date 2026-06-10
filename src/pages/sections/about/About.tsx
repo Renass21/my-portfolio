@@ -1,47 +1,69 @@
-import { Box, Container, styled } from "@mui/material"
-import Typography from "@mui/material/Typography"
+import { Container, Grid, styled } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import { useTranslation } from "react-i18next";
 
 interface Props {
-    id?: string;
+  id?: string;
 }
-function About({id}: Props) {
-
-    const StyledAbout = styled("div")(({ theme }) => ({
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.primary.contrastText,
-        height: "100vh",
-        display: "flex",
-        gap: "2rem",
-        alignItems: "center",
-        [theme.breakpoints.up('xs')]: {
-          paddingTop: "100px",
-      },
-      [theme.breakpoints.up('md')]: {
-          paddingTop: "0",
-      },
-  }))
-    return(
-        <StyledAbout id={id}>
-            <Container maxWidth="lg">
-            <Box display="flex" alignItems="center" textAlign="center" justifyContent="center" flexDirection="column">
-                <Typography variant="h2" marginBottom="2rem" >
-                    ABOUT
-                </Typography>
-                <Typography variant="body1" marginTop="2rem">
-                    Olá, me chamo Renato, tenho 33 anos e atualmente atuo como estagiário de suporte N2 e programação. Trabalho no período noturno como CLT 
-                    em uma empresa fora do ramo de tecnologia, conciliando as duas atividades para ampliar meus conhecimentos e experiência profissional.
-                </Typography>
-                <Typography variant="body1" margin="0.5rem">
-                    Possuo experiência em React, NextJs, NodeJs, Typescript, MySQL e PostgreSQL, com frameworks de banco de dados como PrismaORM e TypeORM.
-                    Também tenho familiaridade com inteligência artificial generativa do Google, utilizando a Vertex AI para soluções que necessitam o uso da IA.
-                </Typography>
-                <Typography margin="0.5rem">
-                    Estou sempre em busca de me aperfeiçoar, de acordo com o que o mercado pede e pronto para novos desafios.
-                </Typography>
-            </Box>
-            </Container>
-        </StyledAbout>      
-    )
+function About({ id }: Props) {
+  const { t } = useTranslation();
+  const StyledAbout = styled("div")(({ theme }) => ({
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.primary.contrastText,
+    minHeight: "100vh",
+    display: "flex",
+    gap: "2rem",
+    alignItems: "center",
+    justifyContent: "center",
+    [theme.breakpoints.up("xs")]: {
+      paddingTop: "80px",
+      paddingBottom: "40px",
+    },
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: "60px",
+      paddingBottom: "40px",
+    },
+    [theme.breakpoints.up("md")]: {
+      paddingTop: "50px",
+      paddingBottom: "50px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      padding: "50px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      padding: "50px",
+    },
+  }));
+  return (
+    <StyledAbout id={id}>
+      <Container maxWidth="lg">
+        <Grid
+          maxWidth="xl"
+          container
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          textAlign="center"
+          flexDirection="column"
+          spacing={2}
+          pt={3}
+        >
+          <Typography variant="h2" margin="1rem">
+            {t("about.title")}
+          </Typography>
+          <Typography variant="body3" margin="0.5rem">
+            {t("about.paragraph1")}
+          </Typography>
+          <Typography variant="body3" margin="0.5rem">
+            {t("about.paragraph2")}
+          </Typography>
+          <Typography variant="body3" margin="0.5rem">
+            {t("about.paragraph3")}
+          </Typography>
+        </Grid>
+      </Container>
+    </StyledAbout>
+  );
 }
 
-export default About
+export default About;

@@ -18,8 +18,11 @@
     "@fontsource/monofett": "^5.2.6",
     "@mui/icons-material": "^6.4.7",
     "@mui/material": "^6.4.7",
+    "i18next": "^26.3.1",
     "react": "^19.0.0",
+    "react-country-flag": "^3.1.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^17.0.8",
     "react-router-dom": "^7.6.3"
   },
   "devDependencies": {

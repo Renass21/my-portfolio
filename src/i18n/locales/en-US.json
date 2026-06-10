@@ -1,0 +1,30 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "hero": {
+    "title": "Renato dos Santos",
+    "subtitle": "Quality Assurance Analyst - Automation & Software Quality",
+    "linkedin": "LinkedIn",
+    "contact": "Contact Me"
+  },
+  "about": {
+    "title": "ABOUT",
+    "paragraph1": "Hi! My name is Renato, a Software Quality Assurance (QA) Analyst with over 2 years of experience in the technology field. I work with manual and automated testing, scenario documentation, and bug report creation, contributing to the delivery of more reliable and stable digital products. I have experience with test automation using Playwright and Cypress.",
+    "paragraph2": "I also have knowledge in Web Development, which gives me a broad view of the software development cycle and facilitates collaboration between the product, development, and quality areas.",
+    "paragraph3": "Currently, I am deepening my knowledge in test automation, CI/CD, REST APIs (Performance testing), and DevOps culture, seeking to continuously evolve as a Software Quality professional."
+  },
+  "skills": {
+    "title": "SKILLS"
+  },
+  "projects": {
+    "title": "PROJECTS",
+    "nikel": {
+      "name": "Nikel - Codaí",
+      "description": "Project called Nikel, from the Codaí course made with bootstrap, HTML, CSS and Javascript"
+    }
+  }
+}

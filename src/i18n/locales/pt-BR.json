@@ -1,0 +1,30 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Projetos"
+  },
+  "hero": {
+    "title": "Renato dos Santos",
+    "subtitle": "Quality Assurance Analyst - Automation & Software Quality",
+    "linkedin": "LinkedIn",
+    "contact": "Entre em Contato"
+  },
+  "about": {
+    "title": "SOBRE",
+    "paragraph1": "Olá! Me chamo Renato, Analista de Qualidade de Software (QA) com mais de 2 anos de experiência na área de tecnologia. Atuo com testes manuais e automatizados, documentação de cenários e criação de bug reports, contribuindo para a entrega de produtos digitais mais confiáveis e estáveis. Tenho experiência com automação de testes utilizando Playwright e Cypress.",
+    "paragraph2": "Também possuo conhecimento em Desenvolvimento Web, o que me proporciona uma visão ampla do ciclo de desenvolvimento de software e facilita a colaboração entre as áreas de produto, desenvolvimento e qualidade.",
+    "paragraph3": "Atualmente, aprofundo meus conhecimentos em automação de testes, CI/CD, APIs REST (testes de Performance) e cultura DevOps, buscando evoluir continuamente como profissional de Qualidade de Software."
+  },
+  "skills": {
+    "title": "HABILIDADES"
+  },
+  "projects": {
+    "title": "PROJETOS",
+    "nikel": {
+      "name": "Nikel - Codaí",
+      "description": "Projeto chamado Nikel, do curso Codaí feito com bootstrap, HTML, CSS e Javascript"
+    }
+  }
+}
