@@ -3,22 +3,30 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import codaiImg from "../../assets/images/codai.jpg";
 import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Skeleton from "@mui/material/Skeleton";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-
-interface MediaProps {
-  loading?: boolean;
-  projectUrl?: string;
+import Button from "@mui/material/Button";
+interface CardProjectsProps {
+  titleProject: string;
+  description: string;
+  imageCard: string;
+  projectUrl: string;
 }
 
-function CardSkeleton(props: MediaProps) {
-  const { loading = false, projectUrl } = props;
-  const { t } = useTranslation();
+function CardProjects({
+  titleProject,
+  description,
+  imageCard,
+  projectUrl,
+}: CardProjectsProps) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const card = (
     <Card
       sx={{
@@ -27,14 +35,19 @@ function CardSkeleton(props: MediaProps) {
         cursor: projectUrl && !loading ? "pointer" : "default",
       }}
     >
+      {loading ? (
+        <Skeleton sx={{ height: 190 }} animation="wave" variant="rectangular" />
+      ) : imageCard ? (
+        <CardMedia
+          component="img"
+          height="180"
+          image={imageCard}
+          alt={titleProject}
+        />
+      ) : (
+        <Skeleton sx={{ height: 190 }} animation="wave" variant="rectangular" />
+      )}
       <CardHeader
-        action={
-          loading ? null : (
-            <IconButton aria-label="settings">
-              <MoreVertIcon />
-            </IconButton>
-          )
-        }
         title={
           loading ? (
             <Skeleton
@@ -49,23 +62,11 @@ function CardSkeleton(props: MediaProps) {
               component="p"
               sx={{ color: "text.secundary" }}
             >
-              {t("projects.nikel.name")}
+              {titleProject}
             </Typography>
           )
         }
-        subheader={
-          loading ? (
-            <Skeleton animation="wave" height={10} width="20%" />
-          ) : (
-            <small>clique no card</small>
-          )
-        }
       />
-      {loading ? (
-        <Skeleton sx={{ height: 190 }} animation="wave" variant="rectangular" />
-      ) : (
-        <CardMedia component="img" height="140" image={codaiImg} alt="Nikel" />
-      )}
       <CardContent>
         {loading ? (
           <React.Fragment>
@@ -78,46 +79,28 @@ function CardSkeleton(props: MediaProps) {
           </React.Fragment>
         ) : (
           <Typography
-            variant="body2"
+            variant="body3"
             component="p"
             sx={{ color: "text.secundary" }}
           >
-            {t("projects.nikel.description")}
+            {description}
           </Typography>
+        )}
+        {projectUrl && (
+          <Button
+            size="small"
+            href={projectUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            URL
+          </Button>
         )}
       </CardContent>
     </Card>
   );
-  if (!loading && projectUrl) {
-    return (
-      <a
-        href={projectUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ textDecoration: "none" }}
-      >
-        {card}
-      </a>
-    );
-  }
+
   return card;
 }
 
-export default function CardProjects() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  return (
-    <div>
-      <CardSkeleton
-        loading={loading}
-        projectUrl="https://nikel-codai2-0.vercel.app/"
-      />
-      {/* Adicione outros cards com outros links se quiser */}
-    </div>
-  );
-}
+export default CardProjects;
