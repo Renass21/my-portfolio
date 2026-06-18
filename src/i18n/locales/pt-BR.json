@@ -9,7 +9,7 @@
     "title": "Renato dos Santos",
     "subtitle": "Quality Assurance Analyst - Automation & Software Quality",
     "linkedin": "LinkedIn",
-    "contact": "Entre em Contato"
+    "contact": "Contato"
   },
   "about": {
     "title": "SOBRE",
@@ -22,6 +22,20 @@
   },
   "projects": {
     "title": "PROJETOS",
+    "github": "GitHub",
+    "openFolder": "Abrir Pasta",
+    "bugReports": {
+      "name": "Relatórios de erros na PetStore",
+      "description": "Criação de Relatórios de erros no projeto Petstore"
+    },
+    "testCases": {
+      "name": "Casos de teste para o registro na PetStore",
+      "description": "Casos de teste para o e-commerce Pet Store"
+    },
+    "testExecution": {
+      "name": "Execução e Relatório de Testes - (STLC)",
+      "description": "(Ciclo de Vida do Teste de Software) para o Carrinho da PetStore. Fases de execução de testes e relatório de testes."
+    },
     "nikel": {
       "name": "Nikel - Codaí",
       "description": "Projeto chamado Nikel, do curso Codaí feito com bootstrap, HTML, CSS e Javascript"

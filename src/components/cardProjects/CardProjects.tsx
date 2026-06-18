@@ -9,19 +9,21 @@ import { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FolderOpenIcon from "@mui/icons-material/FolderOpen";
+import { useTranslation } from "react-i18next";
 interface CardProjectsProps {
-  titleProject: string;
-  description: string;
+  titleProject?: string;
+  description?: string;
   imageCard: string;
   projectUrl: string;
 }
 
 function CardProjects({
-  titleProject,
-  description,
+  titleProject = "",
+  description = "",
   imageCard,
   projectUrl,
 }: CardProjectsProps) {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
   const [ogImage, setOgImage] = useState<string | null>(null);
 
@@ -127,12 +129,12 @@ function CardProjects({
             {projectUrl.includes("github.com") ? (
               <>
                 <GitHubIcon fontSize="small" />
-                GitHub
+                {t("projects.github")}
               </>
             ) : (
               <>
                 <FolderOpenIcon fontSize="small" />
-                Open Folder
+                {t("projects.openFolder")}
               </>
             )}
           </Button>

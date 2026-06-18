@@ -22,6 +22,20 @@
   },
   "projects": {
     "title": "PROJECTS",
+    "github": "GitHub",
+    "openFolder": "Open Folder",
+    "bugReports": {
+      "name": "Bug Reports in PetStore",
+      "description": "Creating Bug Reports in the Petstore project"
+    },
+    "testCases": {
+      "name": "Test Cases for PetStore Registration",
+      "description": "Test cases for the Pet Store e-commerce"
+    },
+    "testExecution": {
+      "name": "Test Execution & Reporting - (STLC)",
+      "description": "(Software Testing Lifecycle) for the PetStore Cart. Testing execution phases and test reporting."
+    },
     "nikel": {
       "name": "Nikel - Codaí",
       "description": "Project called Nikel, from the Codaí course made with bootstrap, HTML, CSS and Javascript"

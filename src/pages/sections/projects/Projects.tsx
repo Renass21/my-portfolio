@@ -55,8 +55,8 @@ function Projects({ id }: Props) {
             {projects.map((project) => (
               <CardProjects
                 key={project.id}
-                titleProject={project.titleProject}
-                description={project.description}
+                titleProject={t(`projects.${project.translationKey}.name`)}
+                description={t(`projects.${project.translationKey}.description`)}
                 imageCard={project.imageCard}
                 projectUrl={project.projectUrl}
               />
