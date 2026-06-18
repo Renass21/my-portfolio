@@ -10,23 +10,23 @@ export interface ProjectsContent {
 export const projects: ProjectsContent[] = [
 {   
     id: 1,
-    titleProject: "Bug Reports",
+    titleProject: "Bug Reports na PetStore",
     imageCard: "",
     description: "Criação de Bug Reports no projeto Petstore",
     projectUrl: "https://docs.google.com/spreadsheets/d/1MwmD1qHuUYa-mv9us80DZF5vvenzahEDLwqAe5Ea-PA/edit?usp=sharing"
 },
 {   
     id: 2,
-    titleProject: "Registration in PetStore task",
+    titleProject: "Casos de teste para o registro na PetStore",
     imageCard: "",
-    description: "Casos de teste na ",
+    description: "Casos de teste para o e-commerce Pet Store",
     projectUrl: "https://docs.google.com/spreadsheets/d/1gKESV_hKKbknvXbOFJy-yhm8TE4yoKsHpGGWnNusTjk/edit?usp=sharing"
 },
 {   
     id: 3,
-    titleProject: "Ciclo de vida do processo de teste(STLC)",
+    titleProject: "Test Execution & Reporting - (STLC)",
     imageCard: "",
-    description: "Tabela de controle de",
+    description: "(Ciclo de Vida do Teste de Software) para o Carrinho da PetStore. Fases de execução de testes e relatório de testes.",
     projectUrl: "https://docs.google.com/spreadsheets/d/1hCAwp5cNdkJ9QuaGQVitOqTkOOOTXeK3ENRQxzcn0tM/edit?usp=sharing"
 },
 /*{   
@@ -36,13 +36,7 @@ export const projects: ProjectsContent[] = [
     description: "",
     projectUrl: ""
 },
-{   
-    id: 5,
-    titleProject: "",
-    imageCard: "",
-    description: "",
-    projectUrl: ""
-},
+
 {   
     id: 6,
     titleProject: "",
