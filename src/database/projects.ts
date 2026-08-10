@@ -25,26 +25,24 @@ export const projects: ProjectsContent[] = [
     imageCard: "",
     projectUrl: "https://docs.google.com/spreadsheets/d/1hCAwp5cNdkJ9QuaGQVitOqTkOOOTXeK3ENRQxzcn0tM/edit?usp=sharing"
 },
-/*{   
+{   
     id: 4,
-    titleProject: "",
+    translationKey: "hrmOrange",
     imageCard: "",
-    description: "",
-    projectUrl: ""
+    projectUrl: "https://github.com/Renass21/first-steps-cypress"
 },
-
+/*
 {   
     id: 6,
-    titleProject: "",
+    translationKey: "",
     imageCard: "",
-    description: "",
     projectUrl: ""
 },
 {   
     id: 7,
     titleProject: "",
+    translationKey: "",
     imageCard: "",
-    description: "",
     projectUrl: ""
 },*/
 ]
