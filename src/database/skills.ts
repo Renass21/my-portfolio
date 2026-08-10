@@ -65,7 +65,7 @@ export const skills: Skills[] = [
 },
 {
     id: 12,
-    skillImage: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original-wordmark.svg",
+    skillImage: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg",
     skillName: "Google Cloud"
 },
 
